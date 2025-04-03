@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+    body { font-family: 'Bebas Neue', sans-serif; margin: 0; padding: 0;background-size: auto; background-color: #f0f8ff; color:#022d44; }
+    section {height: 100vh;display: flex;flex-direction: column;align-items: center;justify-content: center; }
+    .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px; }
+    header { background-color: #0B022C; padding: 28px 0; text-align: center; position: fixed; width: 100%; top: 0; z-index: 1000; }
+    nav img { position: absolute; left: 10px; top: 10px;}
+    nav { margin-left: 80px; }
+    nav ul { list-style: none; padding: 0; margin: 0; text-align: center; }
+    nav ul li { display: inline; margin: 15px; }
+    nav ul li a { color: #F7FFF7; text-decoration: none; font-weight: bold; transition: 0.3s; }
+    nav ul li a:hover { color: #BF68B1; }
+    #home {display: flex;justify-content: center; align-items: center;height: 80vh;}
+    #courses {display: flex;justify-content: center; align-items: center;height: 100vh;}
+    #resources {display: flex;justify-content: center; align-items: center;height: 120vh;}
+    #forum {display: flex;justify-content: center; align-items: center;height: 90vh;}
+    #contact {display: flex;justify-content: center; align-items: center;height: 100vh;}
+    .cta-button { background-color: #BF68B1; color: #0B022D; padding: 10px 15px; border-radius: 5px; text-decoration: none; transition: 0.3s; }
+    .cta-button:hover { background-color: #F7FFF7; color: #0B022D; }
+    form { background: white; padding: 40px; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); max-width: 500px; margin: auto; margin-top: auto; }
+    input, textarea { width: 100%; padding: 10px; margin: 20px 0; border: 1px solid #ddd; border-radius: 5px; }
+    table { width: 90%; border-collapse: collapse; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); border-radius: 5px; overflow: hidden; }
+    table, th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background-color: #0E042F; color: #BF68B1; }
+    .container {display: flex;justify-content: space-between;gap: 40px; max-width: 1200px;margin: auto;}
+    .column {flex: 1;background: white;padding: 20px;border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+    .column h3 {text-align: center;}
+    .container {margin-top: 0;margin-bottom: 0;}
+    p {margin-top: 0;margin-bottom: 0;}
+    #forum form {margin-top: 0;}   
+    section#forum p {margin-bottom: 0;}
+    footer { text-align: center; padding: 10px; background-color: #0E042F; color: #F7FFF7; position: fixed; bottom: 0; width: 100%; }
+    h1, h2, h3, h4, h5, h6 { margin-bottom: 10px; color: #0E042F; }
+    h1 { font-size: 36px; font-weight: bold; }
+    h2 { font-size: 28px; font-weight: bold; }
+    h3 { font-size: 22px; font-weight: bold; }
+    p { margin-bottom: 10px; font-size: 16px; line-height: 2.5; color: #f9f7fc;}
+    section#contact form {margin-top: 0;}
+    section#contact p {margin-bottom: 0; }
+    #forum-messages { display: flex; flex-direction: column; }
+    .message { display: flex; justify-content: space-between; margin-bottom: 10px; }
+    .message .date { font-size: 14px; color: #666666; }
+    .message .name { font-size: 16px; font-weight: bold; }
+    .message .question { font-size: 16px; margin-left: 20px; }
+    .message .reply { font-size: 14px; color: #337ab7; text-decoration: none; }
+    .message .reply:hover { text-decoration: underline; }   
+</style>
+
+<body background="E:\ANU\CSC 103\csc 103 project\commhub school.webp">
+    <header>
+     <nav><a href="#home"><img src="E:\ANU\CSC 103\csc 103 project\commhub-hd-logo.png" alt="CommHub Logo" width="44" height="44"></a> 
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#forum">Forum</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <img src="E:\ANU\CSC 103\csc 103 project\commhub-hd-logo.png" alt="CommHub Logo" width="80" height="80" style="display: block; margin: auto; margin-bottom: 20px;">
+            <h1>Welcome to CommHub</h1>
+            <p>Join our community learning hub and access quality education resources designed for adult learners.</p>
+            <a href="#courses" class="cta-button">Explore Courses</a>
+        </section>
+        <section id="courses">
+            <h2>Available Courses</h2>
+            <p>Discover our range of courses designed to boost your skills.</p>
+            <table>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Description</th>
+                    <th>Duration</th>
+                </tr>
+                <tr>
+                    <td>Basic Computer Skills</td>
+                    <td>Learn the fundamentals of using a computer.</td>
+                    <td>4 Weeks</td>
+                </tr>
+                <tr>
+                    <td>Introduction to Web Development</td>
+                    <td>Learn HTML, CSS, and JavaScript basics.</td>
+                    <td>6 Weeks</td>
+                </tr>
+                <tr>
+                    <td>Microsoft Office Suite</td>
+                    <td>Master Word, Excel, and PowerPoint for office work.</td>
+                    <td>5 Weeks</td>
+                </tr>
+                <tr>
+                    <td>Digital Marketing Basics</td>
+                    <td>Understand SEO, social media marketing, and content strategy.</td>
+                    <td>6 Weeks</td>
+                </tr>
+            </table>
+        </section>
+        <section id="resources">
+            <h2>Resources</h2>
+            <p>Access learning materials and guides to help you excel.</p>
+            <div class="container">
+                <div class="column">
+                    <h3>Downloadable</h3>
+                    <ul>
+                        <li><a href="pdfs/computer_basics.pdf">Computer Basics Guide</a></li>
+                        <li><a href="pdfs/web_development.pdf">Web Development for Beginners</a></li>
+                        <li><a href="videos/tutorial1.mp4">Introduction to Computers (Video)</a></li>
+                        <li><a href="https://www.computerbasics.com" target="Computer Basics Guide">Computer Basics Guide</a></li>
+                        <li><a href="https://www.webdevelopment101.com" target="Web Development for Beginners">Web Development for Beginners</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=video_tutorial" target="Introduction to Computers (Video)">Introduction to Computers (Video)</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Websites</h3>
+                    <ol>
+                        <li><strong>Basic Computer Skills:</strong>
+                            <ul>
+                                <li><a href="https://edu.gcfglobal.org/en/computers/" target="_blank">GCF Global - Computer Basics</a></li>
+                                <li><a href="https://www.digitalunite.com/technology-guides/computer-basics" target="_blank">Digital Unite Guides</a></li>
+                            </ul>
+                        </li>
+                        <li><strong>Introduction to Web Development:</strong>
+                            <ul>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">MDN Web Docs</a></li>
+                                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                                <li><a href="https://www.freecodecamp.org" target="_blank">FreeCodeCamp</a></li>
+                            </ul>
+                        </li>
+                        <li><strong>Microsoft Office Suite:</strong>
+                            <ul>
+                                <li><a href="https://support.microsoft.com/en-us/training" target="_blank">Microsoft Training</a></li>
+                                <li><a href="https://edu.gcfglobal.org/en/microsoft-office/" target="_blank">GCF Global</a></li>
+                            </ul>
+                        </li>
+                        <li><strong>Digital Marketing Basics:</strong>
+                            <ul>
+                                <li><a href="https://learndigital.withgoogle.com/digitalgarage" target="_blank">Google Digital Garage</a></li>
+                                <li><a href="https://www.hubspot.com/resources" target="_blank">HubSpot Academy</a></li>
+                                <li><a href="https://www.udemy.com/course/digital-marketing-course/" target="_blank">Udemy Course</a></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="forum">
+            <h2>Discussion Board</h2>
+            <p>Engage with fellow learners and share your thoughts.</p>
+            <ol>
+                <li><strong>John (2022-01-01):</strong> How do I install Microsoft Office?</li>
+                <a href="#" class="reply-link">Reply</a>
+                <li><strong>Sarah (2022-01-05):</strong> Any tips for learning HTML quickly?</li>
+                <a href="#" class="reply-link">Reply</a>
+            </ol>
+            <form id="forum-form">
+                <textarea id="forum-textarea" placeholder="Type your message here..."></textarea>
+                <button id="forum-submit">Submit</button>
+            </form>
+            <div id="forum-messages">
+                <!-- dynamically loaded messages will be displayed here -->
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>Contact us for any inquiries or support.</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CommHub Learning Hub | All rights reserved.</p>
+    </footer>
+</body>
+<script>document.addEventListener("DOMContentLoaded", function () {
+    // Form validation for Contact Page
+    const contactForm = document.querySelector("form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            alert("Message sent successfully!");
+            contactForm.reset();
+        });
+    }
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    // Forum post submission
+    const forumForm = document.querySelector("#forum form");
+    if (forumForm) {
+        forumForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            if (name === "" || message === "") {
+                alert("Both fields are required!");
+                return;
+            }
+
+            let forumList = document.querySelector("#forum ul");
+            let newPost = document.createElement("li");
+            newPost.innerHTML = `<strong>${name}:</strong> ${message}`;
+            forumList.appendChild(newPost);
+
+            forumForm.reset();
+        });
+    }
+
+    // Search functionality for Courses Page
+    const searchInput = document.getElementById("searchCourses");
+    if (searchInput) {
+        searchInput.addEventListener("keyup", function () {
+            let filter = searchInput.value.toLowerCase();
+            let rows = document.querySelectorAll("table tr");
+            rows.forEach((row, index) => {
+                if (index === 0) return;
+                let courseName = row.cells[0].innerText.toLowerCase();
+                row.style.display = courseName.includes(filter) ? "" : "none";
+            });
+        });
+    }
+
+    // Dynamic resource loading
+    const resourcesList = document.querySelector("#resources-list");
+    if (resourcesList) {
+        const resources = [
+            { name: "Computer Basics Guide", link: "pdfs/computer_basics.pdf" },
+            { name: "Web Development for Beginners", link: "pdfs/web_development.pdf" },
+            { name: "Introduction to Computers (Video)", link: "videos/tutorial1.mp4" }
+        ];
+
+        resources.forEach(resource => {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = `<a href="${resource.link}" target="_blank">${resource.name}</a>`;
+            resourcesList.appendChild(listItem);
+        });
+    }
+});
+</script>
+<head>
+</html>
